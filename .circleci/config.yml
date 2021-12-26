@@ -32,11 +32,8 @@ jobs:
           path: ~/Documents/Docker/rails-docker-shimeji
       - ruby/install-deps
       - run:
-          name: bundle install
-          command: bundle install
-      - run:
           name: Database setup
-          command: bundle exec rails db:migrate
+          command: bundle exec rake db:migrate
       - run:
           name: test
           command: bundle exec rake test
