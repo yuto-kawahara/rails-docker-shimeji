@@ -12,11 +12,6 @@ jobs:
       - checkout:
           path: ~/Documents/Docker/rails-docker-shimeji
       - ruby/install-deps
-      - run:
-          name: yarn Install
-          command: yarn install
-      - run: bundle exec bin/webpack
-
   test:
     docker:
       - image: circleci/ruby:2.7
